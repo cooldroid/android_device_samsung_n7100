@@ -28,9 +28,13 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/n7100/include
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n7100/bluetooth
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_n7100_defconfig
-BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 androidboot.selinux=permissive
+#TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
+#TARGET_KERNEL_CONFIG := cyanogenmod_n7100_defconfig
+TARGET_PREBUILT_KERNEL := device/samsung/n7100/kernel
+BOARD_KERNEL_CMDLINE :=  console=ttySAC2,115200 androidboot.hardware=jet androidboot.selinux=permissive
+BOARD_KERNEL_BASE :=  0x10000000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/n7100/custombootimg.mk
 
 # ril
 BOARD_RIL_CLASS := ../../../device/samsung/n7100/ril/telephony/java
