@@ -35,6 +35,7 @@ BOARD_KERNEL_CMDLINE :=  console=ttySAC2,115200 androidboot.hardware=jet android
 BOARD_KERNEL_BASE :=  0x10000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/n7100/custombootimg.mk
+TARGET_USERIMAGES_USE_F2FS := true
 
 # ril
 BOARD_RIL_CLASS := ../../../device/samsung/n7100/ril/telephony/java
