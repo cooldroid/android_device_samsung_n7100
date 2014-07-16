@@ -34,7 +34,7 @@ TARGET_PREBUILT_KERNEL := device/samsung/n7100/kernel
 BOARD_KERNEL_CMDLINE :=  console=ttySAC2,115200 androidboot.hardware=jet androidboot.selinux=permissive
 BOARD_KERNEL_BASE :=  0x10000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x11000000
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/n7100/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/smdk4412-common/custombootimg.mk
 TARGET_USERIMAGES_USE_F2FS := true
 
 # ril
